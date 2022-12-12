@@ -126,12 +126,14 @@ export default {
 }
 
 input {
+  font-weight: bold;
   padding: 15px 20px;
   border: 1px solid black;
   border-radius: 10px;
 }
 
-Table {
+#table {
   margin-top: 20px;
+  width: 100%;
 }
 </style>

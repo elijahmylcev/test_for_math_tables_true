@@ -2,7 +2,7 @@
   <div class="general">
     <h1 class="dsongentom desetungavon">Проверьте, являются ли данные выражения абсолютной истиной</h1>
     <task_list @up="increase" />
-    <Solution :currentTask="currentTask" />
+    <Solution :currentTask="currentTask" class="solution" />
   </div>
 </template>
 
@@ -81,5 +81,9 @@ h1:after {
   to {
     width: 35em;
   }
+}
+
+.solution {
+  margin-top: 20px;
 }
 </style>

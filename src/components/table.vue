@@ -54,5 +54,6 @@ input {
   outline: none;
   padding: 5px;
   text-align: center;
+  font-weight: bold;
 }
 </style>

@@ -42,8 +42,8 @@ export default {
 .task_list {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   row-gap: 30px;
-  align-items: flex-start;
+  align-items: center;
 }
 </style>
