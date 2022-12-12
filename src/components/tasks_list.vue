@@ -1,13 +1,12 @@
 <template>
-  <div class="general">
-    <h1>Проверьте, являются ли данные выражения абсолютной истиной</h1>
+  <div class="task_list">
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'general',
+  name: 'task_list',
   props: {
     tasks: Array
   }
