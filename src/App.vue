@@ -23,4 +23,10 @@ export default {
   margin-top: 60px;
   padding: 0 40px;
 }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 </style>
