@@ -1,7 +1,7 @@
 <template>
   <div class="task_list">
     <div v-for="task in tasks" :key="task">
-      <task :task="task" />
+      <task :task="task" @click="toUp" />
     </div>
   </div>
 </template>
@@ -12,16 +12,28 @@ export default {
   name: 'task_list',
   data() {
     return {
-      tasks: ['( A ⇒ B ) ⇔ ¬A ∨ B',
-        '¬( A ∨ B ) ⇔ ¬A ∧ ¬B',
-        '¬( A ⇒ B ) ⇔ A ∧ ¬B',
-        '( A ⇒ B ) ⇔ ( ¬B ⇒ ¬A )'
-      ]
+      tasks:
+        [
+          '( A ⇒ B ) ⇔ ¬A ∨ B',
+          '¬( A ∨ B ) ⇔ ¬A ∧ ¬B',
+          '¬( A ⇒ B ) ⇔ A ∧ ¬B',
+          '( A ⇒ B ) ⇔ ( ¬B ⇒ ¬A )'
+        ],
+      currentTask: ''
     }
   },
+  emits: ['update-task'],
   components: {
     task: task
-  }
+  },
+  methods: {
+    toUp(e) {
+      this.currentTask = e.target.textContent
+      this.$emit('up', {
+        value: this.currentTask
+      })
+    }
+  },
 }
 </script>
 

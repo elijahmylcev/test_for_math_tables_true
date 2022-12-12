@@ -1,19 +1,32 @@
 <template>
   <div class="general">
     <h1 class="dsongentom desetungavon">Проверьте, являются ли данные выражения абсолютной истиной</h1>
-    <task_list />
+    <task_list @up="increase" />
+    <Solution :currentTask="currentTask" />
   </div>
 </template>
 
 <script>
 import tasks_list from './tasks_list.vue';
+import Solution from './Solution.vue'
 export default {
   name: 'general',
+  data() {
+    return {
+      currentTask: ''
+    }
+  },
   components: {
-    task_list: tasks_list
+    task_list: tasks_list,
+    Solution
   },
   props: {
     tasks: Array
+  },
+  methods: {
+    increase(n) {
+      this.currentTask = n.value
+    }
   }
 }
 </script>
